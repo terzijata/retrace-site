@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrace — Privacy Policy</title>
+<meta name="description" content="Retrace's privacy policy. Everything stays on your device; Retrace makes no network requests.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Retrace</a>
+    <nav class="links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#backup">Backup</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap article">
+  <a class="back" href="index.html">← Back to Retrace</a>
+  <h1>Retrace — Privacy Policy</h1>
+  <p class="updated">Last updated: 2026-09-19</p>
+
+  <p>Retrace is a tab and session manager for Google Chrome. It is built to be <b>private by default</b>: everything Retrace stores stays on your own computer, and Retrace makes <b>no network requests</b> — it has no servers, no account system, and no analytics.</p>
+
+  <h2>What data Retrace handles</h2>
+  <p>Retrace works with the following information, only for the sessions and windows you choose to save or that are shown to you in its interface:</p>
+  <ul>
+    <li><b>Tab information</b> — the title, URL, and favicon URL of open tabs.</li>
+    <li><b>Sessions and Spaces you create</b> — the names, groupings, pins, and archive state you assign.</li>
+    <li><b>An activity log</b> — a local list of actions you take in Retrace (saved, reopened, renamed, pinned, archived, deleted), so you can retrace your steps.</li>
+    <li><b>Settings</b> — your preferences, such as whether pinned sessions reopen on launch and what the toolbar icon opens.</li>
+    <li><b>A license key</b> (optional) — if you buy the Backup &amp; restore unlock and paste your key, the key is stored locally. It embeds the email you purchased with; that email stays on your device and is never transmitted by the extension.</li>
+  </ul>
+  <p>Chrome classifies tab URLs and titles as <b>“web browsing activity.”</b> Retrace uses this data solely to provide its features to you.</p>
+
+  <h2>How Retrace uses this data</h2>
+  <p>The data above is used <b>only</b> to provide Retrace's user-facing features: saving a window as a session, searching your sessions, reopening them, grouping them into Spaces, and showing your activity history. That's it.</p>
+
+  <h2>On-device AI</h2>
+  <p>When your device supports Chrome's built-in AI (Gemini Nano), Retrace can generate a short summary and title for a session, group related tabs, and write a brief. <b>This runs entirely on your device.</b> No tab data, and no other information, is sent to Google, to us, or to any third party for these features. If on-device AI is unavailable, Retrace falls back to simple summaries built from the tabs' domains.</p>
+
+  <h2>Backup files and your license key</h2>
+  <p>Backup &amp; restore is an optional paid feature. When you <b>export</b>, Retrace writes a file to a location you choose; that file contains your sessions, Spaces, activity log, and settings, and it stays wherever you save it — Retrace does not upload it anywhere. When you <b>import</b>, Retrace reads a file you pick. Neither action makes a network request.</p>
+  <p>Your <b>license key</b> is verified entirely on your device, using a cryptographic signature check against a public key built into the extension. No server is contacted to activate or validate it, so the "no network requests" promise below holds even for paid users. Purchasing a key happens on a separate checkout page run by our payment provider, which is governed by that provider's own privacy policy; the Retrace extension is not involved in the purchase.</p>
+
+  <h2>Where the data is stored</h2>
+  <p>All of the above is stored locally using Chrome's <code>chrome.storage.local</code> API, on the device where you use Retrace. It is <b>not</b> transmitted off your device, <b>not</b> synced to other devices, and <b>not</b> sent to us or any third party. Retrace does not use <code>chrome.storage.sync</code>.</p>
+
+  <h2>What Retrace does NOT do</h2>
+  <ul>
+    <li>No data is sold, rented, or shared with anyone.</li>
+    <li>No advertising, ad targeting, retargeting, or interest-based profiling.</li>
+    <li>No account, login, or personally identifying registration.</li>
+    <li>No remote code and no external analytics or tracking.</li>
+    <li>No transmission of your data over the network — Retrace makes no network requests at all.</li>
+  </ul>
+
+  <h2>Retention and deletion</h2>
+  <p>Your data stays until you delete it. You are in control:</p>
+  <ul>
+    <li>Delete a session, Space, or clear items from within Retrace at any time.</li>
+    <li>Removing (uninstalling) the extension, or clearing the extension's site data in Chrome, permanently erases everything Retrace has stored.</li>
+  </ul>
+  <p>Because the data never leaves your device, there is nothing for us to delete on our side — we never have it.</p>
+
+  <h2>Limited Use disclosure</h2>
+  <p>Retrace's use of information received from Chrome APIs adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the <b>Limited Use</b> requirements. Specifically, tab and browsing data accessed by Retrace is used only to provide user-facing features described here and in the Chrome Web Store listing; it is never transferred to third parties except as required by law, never used for advertising, and never read by a human (there is no server for anyone to read it from — it stays on your device).</p>
+
+  <h2>Children's privacy</h2>
+  <p>Retrace is a general-purpose productivity tool and is not directed at children. It collects no personal information.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted at this same location with a new “Last updated” date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or Retrace's privacy practices: <a href="mailto:retrace.contact@protonmail.com">retrace.contact@protonmail.com</a></p>
+</main>
+
+<footer class="site">
+  <div class="wrap row">
+    <div>© <span id="yr"></span> Retrace · Your tabs, on your device, nowhere else.</div>
+    <nav><a href="index.html">Home</a></nav>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

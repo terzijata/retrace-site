@@ -1,0 +1,12 @@
+# This is a PUBLIC repo (GitHub Pages). Nothing secret belongs here — in
+# particular never copy the extension's scripts/license-private-key.json into it.
+scripts/license-private-key.json
+*.key
+*.pem
+
+# OS / editor cruft.
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
