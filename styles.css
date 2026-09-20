@@ -41,8 +41,8 @@ header.site{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--
 .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px;text-decoration:none;color:inherit}
 .brand img{width:28px;height:28px;border-radius:7px}
 .nav .links{display:flex;align-items:center;gap:22px}
-.nav .links a{text-decoration:none;color:var(--on-surface-variant);font-size:14px;font-weight:500}
-.nav .links a:hover{color:var(--on-surface)}
+.nav .links a:not(.btn){text-decoration:none;color:var(--on-surface-variant);font-size:14px;font-weight:500}
+.nav .links a:not(.btn):hover{color:var(--on-surface)}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;border-radius:22px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent;white-space:nowrap;transition:filter .15s,background .15s}
