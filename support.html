@@ -66,7 +66,7 @@
   <p><b>This runs entirely on your device</b> — nothing about your tabs is ever sent anywhere. It needs a reasonably capable desktop (enough disk and memory/GPU for the model). If your device doesn't support it, Retrace quietly falls back to clear <b>domain-based summaries</b> instead — everything else still works. On-device AI is a free bonus, never something you pay for.</p>
 
   <h2>Using Retrace Pro (paid)</h2>
-  <p><b>Retrace Pro</b> is the one optional paid unlock — a <a href="pricing.html">one-time $10</a>, available in the <b>Microsoft Edge</b> version of Retrace. One license key turns on <b>two</b> features: Backup &amp; restore and custom keyboard shortcuts.</p>
+  <p><b>Retrace Pro</b> is the one optional paid unlock — a <a href="pricing.html">one-time $10</a>, available in the <b>Microsoft Edge</b> version of Retrace. One license key turns on the whole bundle: backup &amp; restore (with encryption and a connected-file option), keyboard shortcuts and a command palette, auto-archive, and templates.</p>
   <ol class="steps">
     <li><div><b>Buy Retrace Pro</b> on our checkout. You'll receive a license key by email that looks like <code>RTRC-…</code>.</div></li>
     <li><div>Open <b>Retrace › Settings › Backup &amp; restore</b>, paste your key, and press <b>Unlock</b>. It's verified <b>offline on your device</b> — Retrace Pro turns on right away.</div></li>
@@ -75,6 +75,14 @@
   </ol>
   <p>Use backup to move your data to another device, or to restore after a reinstall. The Chrome version is free and doesn't include the paid features.</p>
 
+  <h2>More Retrace Pro features</h2>
+  <ul>
+    <li><b>Encrypted backups</b> — tick <b>Encrypt the export with a password</b> before exporting. The file is protected with strong on-device encryption; you'll need that password to restore it, and we never store it, so keep it safe.</li>
+    <li><b>Connected backup file</b> — under Backup &amp; restore, choose <b>Connect a file</b> and pick a location. Retrace then keeps that file up to date automatically whenever it's open. Put the file in a Dropbox/Drive/OneDrive folder and your sessions follow you across devices — still with no servers. Use <b>Restore from it</b> on another device to pull the latest. If the browser drops the file's permission, a <b>Reconnect</b> button brings it back.</li>
+    <li><b>Auto-archive</b> — under <b>Settings › Auto-archive</b>, turn it on and choose a window (7–90 days). Saved, unpinned sessions you haven't opened in that long are archived automatically. It's reversible — nothing is deleted.</li>
+    <li><b>Templates</b> — under <b>Settings › Templates</b>, use <b>Save this window</b> to store a reusable set of tabs. Press <b>Open</b> to launch it fresh anytime. Unlike a session, a template is a launcher, not a record.</li>
+  </ul>
+
   <h2>Using keyboard shortcuts (Retrace Pro)</h2>
   <p>Once Retrace Pro is unlocked, you can drive the <b>side panel</b> and <b>full page</b> from the keyboard — no mouse needed. Every shortcut is <b>rebindable</b> under <b>Settings › Keyboard shortcuts</b>, and pressing <kbd>?</kbd> anytime opens a cheat sheet.</p>
   <ul>
@@ -82,6 +90,7 @@
     <li><b>Enter</b> open the selected session's details · <b>O</b> reopen all its tabs.</li>
     <li><b>P</b> pin/unpin · <b>A</b> archive/unarchive · <b>R</b> rename · <b>D</b> delete (with undo).</li>
     <li><b>/</b> jump to search · <b>1–4</b> switch filters (All / Pinned / Archived / History).</li>
+    <li><b>⌘/Ctrl-K</b> open the <b>command palette</b> — a fuzzy search over commands and your sessions.</li>
     <li><b>Esc</b> step back out · <b>?</b> show the cheat sheet.</li>
   </ul>
   <p>Shortcuts work only inside Retrace's own surfaces, so they add <b>no browser permissions</b>. The two global shortcuts (save the current window, open Retrace) are free for everyone and can be rebound at <code>edge://extensions/shortcuts</code>.</p>
