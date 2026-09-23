@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Retrace — Pricing</title>
 <meta name="description" content="Retrace pricing. The extension is free to install. One optional unlock — Retrace Pro, a one-time $10 for backup, sync through a connected file, keyboard shortcuts, auto-archive and templates — delivered as a license key by email.">
 <link rel="icon" href="icon.png">
@@ -48,7 +50,7 @@
     </div>
   </section>
 
-  <section class="wrap" id="buy" style="padding-top:0">
+  <section class="wrap flush-top" id="buy">
     <div class="price-wrap">
       <div class="price">
         <div class="tag">Retrace Pro · for Microsoft Edge</div>
@@ -67,7 +69,7 @@
     </div>
   </section>
 
-  <section class="wrap article" style="padding-top:0">
+  <section class="wrap article flush-top">
     <h2>What exactly you're buying</h2>
     <p><b>Product:</b> <b>Retrace Pro</b> — a one-time digital license that unlocks the Retrace Pro features inside the Retrace browser extension, listed below.</p>
     <p><b>Price:</b> $10.00, charged once. It is <b>not</b> a subscription and there are no recurring fees.</p>
@@ -82,7 +84,7 @@
     <p><b>Platform:</b> Retrace Pro is available in the <b>Microsoft Edge</b> version of Retrace. The Google Chrome version is free and does not include the paid features.</p>
     <p><b>Payments:</b> handled by <b>Paddle</b>, acting as the merchant of record. The Retrace extension is never involved in payment and never sees your payment details.</p>
     <p><b>Refunds:</b> full refunds within 14 days — see the <a href="refund.html">Refund Policy</a>. Full purchase terms are in the <a href="terms.html">Terms of Sale</a>.</p>
-    <p style="margin-top:28px"><a class="back" href="index.html">← Back to Retrace</a></p>
+    <p class="back-row"><a class="back" href="index.html">← Back to Retrace</a></p>
   </section>
 </main>
 
@@ -100,6 +102,6 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="year.js"></script>
 </body>
 </html>

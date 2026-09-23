@@ -1,0 +1,6 @@
+# Found a security problem in Retrace (the browser extension or this site)?
+# Please email us — we reply within a few business days. Thank you.
+Contact: mailto:contact@retrace-addon.store
+Expires: 2027-09-23T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://retrace-addon.store/.well-known/security.txt

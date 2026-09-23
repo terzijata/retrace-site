@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Retrace — Privacy Policy</title>
 <meta name="description" content="Retrace's privacy policy. Everything stays on your device; Retrace makes no network requests — its security policy blocks them.">
 <link rel="icon" href="icon.png">
@@ -59,6 +61,16 @@
   <p>None of these actions makes a network request from Retrace.</p>
   <p>Your <b>license key</b> is verified entirely on your device, using a cryptographic signature check against a public key built into the extension. No server is contacted to activate or validate it, so the "no network requests" promise holds even for paid users. Purchasing a key happens on a separate checkout page run by our payment provider, which is governed by that provider's own privacy policy; the Retrace extension is not involved in the purchase.</p>
 
+  <h2>If you buy Retrace Pro</h2>
+  <p>The extension never handles payment. Retrace Pro is sold through <b>Paddle</b>, our merchant of record, which processes your payment under its own privacy policy. To deliver your license key, Paddle shares with us your <b>email address</b>, your <b>order number</b> and what you bought — never your card or payment details.</p>
+  <ul>
+    <li><b>Why we have it:</b> to email you your license key, and to help with support, refunds, or resending a lost key. Emails you send to our support address are handled the same way.</li>
+    <li><b>Where it's kept:</b> in our Proton Mail inbox (stored encrypted) and in Paddle's records. Your email is also written into your license key, which stays on your device.</li>
+    <li><b>How long:</b> for as long as you might need your key resent or your purchase supported — or until you ask us to delete it.</li>
+    <li><b>What we don't do:</b> we never use it for marketing and never share it with anyone else.</li>
+    <li><b>Your rights:</b> you can ask to see, correct, or delete what we hold about you by emailing <a href="mailto:contact@retrace-addon.store">contact@retrace-addon.store</a>. We'll delete it on our side; Paddle may have to keep transaction records for tax law, and a key you already have keeps working.</li>
+  </ul>
+
   <h2>Where the data is stored</h2>
   <p>All of the above is stored locally using the browser's <code>chrome.storage.local</code> API (and, for the connected backup file's handle and key, the extension's IndexedDB), on the device where you use Retrace. It is <b>not</b> transmitted off your device, <b>not</b> synced to other devices by Retrace, and <b>not</b> sent to us or any third party. Retrace does not use <code>chrome.storage.sync</code>.</p>
 
@@ -85,7 +97,7 @@
   <p>Retrace's use of information received from Chrome APIs adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the <b>Limited Use</b> requirements. Specifically, tab and browsing data accessed by Retrace is used only to provide user-facing features described here and in the store listing; it is never transferred to third parties except as required by law, never used for advertising, and never read by a human (there is no server for anyone to read it from — it stays on your device).</p>
 
   <h2>Children's privacy</h2>
-  <p>Retrace is a general-purpose productivity tool and is not directed at children. It collects no personal information.</p>
+  <p>Retrace is a general-purpose productivity tool and is not directed at children. The extension collects no personal information.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, the updated version will be posted at this same location with a new “Last updated” date.</p>
@@ -101,6 +113,6 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="year.js"></script>
 </body>
 </html>

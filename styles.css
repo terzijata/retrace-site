@@ -135,3 +135,7 @@ footer.site a:hover{color:var(--on-surface)}
   .hero{padding:52px 0 40px}
   section{padding:46px 0}
 }
+
+/* Utility classes (inline style attributes aren't allowed by the pages' CSP). */
+.flush-top{padding-top:0}
+.back-row{margin-top:28px}
