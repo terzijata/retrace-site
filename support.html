@@ -25,7 +25,7 @@
 <main class="wrap article">
   <a class="back" href="index.html">← Back to Retrace</a>
   <h1>Support &amp; help</h1>
-  <p class="updated">Last updated: 2026-09-20</p>
+  <p class="updated">Last updated: 2026-09-23</p>
 
   <p>Retrace is a small, independent product, and we help you <b>directly by email</b> — no tickets, no bots, no call queue. This page covers <b>how to reach us</b>, and <b>how to use Retrace</b>: the free features, the on-device AI, and <b>Retrace Pro</b> (backup &amp; restore and keyboard shortcuts).</p>
 
@@ -51,7 +51,10 @@
     <li><b>Sort &amp; multi-select</b> — sort your list by recent, name, or number of tabs, and use <b>Select</b> to archive, delete, or move several sessions to a Space at once.</li>
     <li><b>Grow a session</b> — use <b>Add this window</b> to fold the current tabs into an existing session, or remove a single tab from it.</li>
     <li><b>Spaces</b> — create folders and move sessions into them to keep related work together.</li>
-    <li><b>Search &amp; history</b> — search every session by title, summary, or tab; restore recently closed windows; and browse a searchable log of what you did.</li>
+    <li><b>Search &amp; history</b> — search every session by title, summary, tab title or web address; restore recently closed windows; and browse a searchable log of what you did (you can clear it in Settings).</li>
+    <li><b>Save &amp; close</b> — in <b>Settings › After saving a window</b>, choose <b>Close saved tabs</b> and every save also closes those tabs to free up memory (browser-pinned tabs are left alone).</li>
+    <li><b>Recovery snapshots</b> — every few minutes Retrace notes which pages are open in each window (never incognito). After a crash, open <b>Settings › Recovery snapshots</b> and press <b>Reopen</b>, or <b>Save</b> to keep a snapshot as sessions.</li>
+    <li><b>Import from another tab manager</b> — <b>Settings › Import from another tab manager</b> accepts OneTab's exported text (file or paste), Session Buddy and Toby JSON exports, and browser bookmark files.</li>
   </ul>
 
   <h2>Using the on-device AI features</h2>
@@ -71,14 +74,14 @@
     <li><div><b>Buy Retrace Pro</b> on our checkout. You'll receive a license key by email that looks like <code>RTRC-…</code>.</div></li>
     <li><div>Open <b>Retrace › Settings › Backup &amp; restore</b>, paste your key, and press <b>Unlock</b>. It's verified <b>offline on your device</b> — Retrace Pro turns on right away.</div></li>
     <li><div><b>Backup — Export</b> writes a single file containing your sessions, Spaces, history, and settings. Save it wherever you like — it never leaves your device unless you move it.</div></li>
-    <li><div><b>Backup — Import</b> reads a file you pick. <b>Merge</b> (the default) is non-destructive — it only adds sessions and Spaces you don't already have. <b>Replace</b> overwrites everything with the file's contents.</div></li>
+    <li><div><b>Backup — Import</b> reads a file you pick and <b>merges</b> it: it adds what's new, keeps the newer copy of anything edited on both sides, and never wipes this device. Sessions you deleted elsewhere go to the trash, so nothing is lost for 30 days.</div></li>
   </ol>
   <p>Use backup to move your data to another device, or to restore after a reinstall. The Chrome version is free and doesn't include the paid features.</p>
 
   <h2>More Retrace Pro features</h2>
   <ul>
     <li><b>Encrypted backups</b> — tick <b>Encrypt the export with a password</b> before exporting. The file is protected with strong on-device encryption; you'll need that password to restore it, and we never store it, so keep it safe.</li>
-    <li><b>Connected backup file</b> — under Backup &amp; restore, choose <b>Connect a file</b> and pick a location. Retrace then keeps that file up to date automatically whenever it's open. Put the file in a Dropbox/Drive/OneDrive folder and your sessions follow you across devices — still with no servers. Use <b>Restore from it</b> on another device to pull the latest. If the browser drops the file's permission, a <b>Reconnect</b> button brings it back.</li>
+    <li><b>Connected backup file</b> — under Backup &amp; restore, choose <b>Connect a file</b> and pick a location. Retrace keeps that file in two-way sync whenever it's open: it merges in changes from other devices, then writes the combined result back. Put the file in a Dropbox/Drive/OneDrive folder and your sessions follow you across devices — still with no Retrace servers. It's <b>encrypted by default</b>: use the same password on every device. <b>Sync now</b> pulls the latest immediately. If the browser drops the file's permission, a <b>Reconnect</b> button brings it back.</li>
     <li><b>Auto-archive</b> — under <b>Settings › Auto-archive</b>, turn it on and choose a window (7–90 days). Saved, unpinned sessions you haven't opened in that long are archived automatically. It's reversible — nothing is deleted.</li>
     <li><b>Templates</b> — under <b>Settings › Templates</b>, use <b>Save this window</b> to store a reusable set of tabs. Press <b>Open</b> to launch it fresh anytime. Unlike a session, a template is a launcher, not a record.</li>
   </ul>
@@ -93,7 +96,7 @@
     <li><b>⌘/Ctrl-K</b> open the <b>command palette</b> — a fuzzy search over commands and your sessions.</li>
     <li><b>Esc</b> step back out · <b>?</b> show the cheat sheet.</li>
   </ul>
-  <p>Shortcuts work only inside Retrace's own surfaces, so they add <b>no browser permissions</b>. The two global shortcuts (save the current window, open Retrace) are free for everyone and can be rebound at <code>edge://extensions/shortcuts</code>.</p>
+  <p>Shortcuts work only inside Retrace's own surfaces, so they add <b>no browser permissions</b>. The two global shortcuts (save the current window, open Retrace) are free for everyone; <b>Settings › Browser shortcuts</b> shows what they're set to, and you can rebind them at <code>edge://extensions/shortcuts</code> (on Edge, saving defaults to <kbd>Alt+Shift+S</kbd>, since <kbd>Ctrl+Shift+S</kbd> is Edge's Web capture).</p>
 
   <h2>When you email us, please include</h2>
   <ul>
