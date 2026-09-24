@@ -37,14 +37,18 @@
     <li><b>Tab information</b> — the title and URL of open tabs. Site icons are shown from your browser's own local favicon cache; Retrace never fetches them from the sites.</li>
     <li><b>Sessions, Spaces and templates you create</b> — the names, groupings, pins, and archive state you assign; any <b>notes</b> you write on a session, a page or a Space; and any <b>auto-filing rules</b> you give a Space (sites and words). Suggestions for which Space a session belongs in are worked out on your device from this same data.</li>
     <li><b>An activity log</b> — a local list of actions you take in Retrace (saved, reopened, renamed, pinned, archived, deleted), so you can retrace your steps.</li>
-    <li><b>Recovery snapshots</b> — every few minutes, the titles and URLs of the tabs open in your normal (never incognito) windows, so you can reopen them after a crash. The last 12 changes are kept. You can turn this off or clear them in Settings.</li>
+    <li><b>Recovery timeline</b> — every few minutes, the titles and URLs of the tabs open in your normal (never incognito) windows, so you can reopen them after a crash or find a page you closed. Every change in the last 2 hours is kept, then one per hour, for a day (up to 30 days if you choose, with Retrace Pro). You can turn this off or clear it in Settings.</li>
+    <li><b>Tags and reminders</b> you add to sessions, and which session is kept in sync with which open window (held in memory only until the browser closes).</li>
     <li><b>Settings</b> — your preferences, such as whether pinned sessions reopen on launch and what the toolbar icon opens.</li>
     <li><b>A license key</b> (optional) — if you buy the Retrace Pro unlock and paste your key, the key is stored locally. It embeds the email you purchased with; that email stays on your device and is never transmitted by the extension.</li>
   </ul>
   <p>Chrome classifies tab URLs and titles as <b>“web browsing activity.”</b> Retrace uses this data solely to provide its features to you.</p>
 
   <h2>How Retrace uses this data</h2>
-  <p>The data above is used <b>only</b> to provide Retrace's user-facing features: saving a window as a session, summarizing and searching your sessions, reopening them, grouping them into Spaces (including suggesting or filing a Space for a new session, if you let it), sorting a window's tabs into browser tab groups when you ask, recovering windows after a crash, and showing your activity history. That's it.</p>
+  <p>The data above is used <b>only</b> to provide Retrace's user-facing features: saving a window as a session, summarizing and searching your sessions, reopening them, grouping them into Spaces (including suggesting or filing a Space for a new session, if you let it), sorting a window's tabs into browser tab groups when you ask, showing and tidying your open windows, reminding you about a session on the toolbar icon, recovering windows after a crash, and showing your activity history. That's it.</p>
+
+  <h2>Sharing</h2>
+  <p>When you share a session or a Space, Retrace copies its links to your clipboard or saves a file (a <code>.retrace</code> file or a web page of links) where you choose. <b>Nothing is uploaded</b> — you decide where that text or file goes. Notes are left out unless you tick “Include my notes”.</p>
 
   <h2>On-device AI</h2>
   <p>When your device supports your browser's built-in on-device AI (Chrome's Gemini Nano, or Edge's own on-device model), Retrace can generate a short summary, title and topics for a session, group related tabs, write a brief, read a search typed as a sentence and turn it into keywords, suggest which of your Spaces a session belongs in, and write a one-line overview of a Space. <b>This runs entirely on your device.</b> No tab data, notes, searches, or any other information is sent to Google, Microsoft, to us, or to any third party for these features. To avoid re-running the model, recent AI results are kept in a local cache on your device. If on-device AI is unavailable, Retrace builds its summaries and suggestions from the tabs' own titles and web addresses — also on your device.</p>
@@ -88,7 +92,7 @@
   <ul>
     <li><b>Deleted sessions</b> go to a trash in Settings for 30 days (so an accidental delete can be undone), then are removed for good. “Delete forever” and “Empty trash” remove them immediately and blank their titles in the activity log.</li>
     <li><b>Activity history</b> (up to 500 entries) can be cleared in Settings at any time.</li>
-    <li><b>Recovery snapshots</b> can be turned off and cleared in Settings.</li>
+    <li><b>The recovery timeline</b> can be turned off and cleared in Settings.</li>
     <li><b>Notes</b> are removed when you clear them or delete what they're on; the local <b>AI cache</b> holds only recent results and is removed with the extension.</li>
     <li>Removing (uninstalling) the extension, or clearing the extension's site data in your browser, permanently erases everything Retrace has stored.</li>
   </ul>
