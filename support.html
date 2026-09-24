@@ -52,23 +52,27 @@
     <li><b>Rename &amp; delete</b> — rename any session, or delete it; destructive actions show an <b>Undo</b>. Deleted sessions also go to a <b>30-day trash</b> in Settings, so you can restore them later.</li>
     <li><b>Sort &amp; multi-select</b> — sort your list by recent, name, or number of tabs, and use <b>Select</b> to archive, delete, or move several sessions to a Space at once.</li>
     <li><b>Grow a session</b> — use <b>Add this window</b> to fold the current tabs into an existing session, or remove a single tab from it.</li>
-    <li><b>Spaces</b> — create folders and move sessions into them to keep related work together.</li>
-    <li><b>Search &amp; history</b> — search every session by title, summary, tab title or web address; restore recently closed windows; and browse a searchable log of what you did (you can clear it in Settings).</li>
+    <li><b>Spaces</b> — create folders and move sessions into them to keep related work together. Retrace learns what each Space is about: when you save a window it suggests the right Space (tap <b>Add</b>), and <b>Spaces › Sort unfiled sessions</b> files the rest in a tap and proposes new Spaces. To have clear matches filed for you, choose <b>Settings › Saving › Spaces for new sessions › File automatically when sure</b> (there's always an Undo).</li>
+    <li><b>Space rules, look &amp; notes</b> — open a Space and press the palette button to give it an emoji, a colour and <b>auto-file rules</b> (sites like <code>jira.acme.com</code> or <code>github.com/acme</code>, and words). Saves that match go straight in. A Space also has a note, and can open all its sessions at once — each in its own window, or all in one window with a tab group per session.</li>
+    <li><b>Notes</b> — in a session's details, write a note on the session, or press the note icon on any page to note that page. Notes are searchable.</li>
+    <li><b>Group tabs</b> — press <b>Group tabs</b> next to “Active now” to sort the current window's loose tabs into browser tab groups by topic. Your pinned tabs and existing groups are left alone, and <b>Undo</b> removes the new groups.</li>
+    <li><b>Search &amp; history</b> — search every session by title, summary, note, page title or web address (including the words of a search you made). Narrow it with <code>site:github.com</code>, <code>in:Work</code>, <code>is:pinned</code>, or dates like “last week” and “yesterday” — or type a sentence. Restore recently closed windows, and browse a searchable log of what you did (you can clear it in Settings).</li>
     <li><b>Save &amp; close</b> — in <b>Settings › After saving a window</b>, choose <b>Close saved tabs</b> and every save also closes those tabs to free up memory (browser-pinned tabs are left alone).</li>
     <li><b>Recovery snapshots</b> — every few minutes Retrace notes which pages are open in each window (never incognito). After a crash, open <b>Settings › Recovery snapshots</b> and press <b>Reopen</b>, or <b>Save</b> to keep a snapshot as sessions.</li>
     <li><b>Import from another tab manager</b> — <b>Settings › Import from another tab manager</b> accepts OneTab's exported text (file or paste), Session Buddy and Toby JSON exports, and browser bookmark files.</li>
   </ul>
 
   <h2>Using the on-device AI features</h2>
-  <p>On a supported device, Retrace uses your browser's <b>built-in, on-device AI</b> (Chrome's Gemini Nano, or Edge's own on-device model) to make your sessions easier to scan. It can:</p>
+  <p>Retrace understands your tabs even without AI — summaries, names, Space suggestions and search all work from your tabs' titles and web addresses. On a supported device, it also uses your browser's <b>built-in, on-device AI</b> (Chrome's Gemini Nano, or Edge's own on-device model) to go further. It can:</p>
   <ul>
-    <li>write a one-line <b>summary</b> of a session,</li>
-    <li>suggest a <b>name</b> for it,</li>
+    <li>write a sharper one-line <b>summary</b>, a <b>name</b> and a few topics for a session (in your tabs' language, when the model supports it),</li>
+    <li>show a live summary of the window you're in, under its tab titles,</li>
     <li><b>group</b> related tabs, and write a short <b>brief</b>,</li>
-    <li><b>auto-organize</b> loose sessions into the right Space.</li>
+    <li>read a <b>search typed as a sentence</b> and find what you meant,</li>
+    <li>help pick the right <b>Space</b> when the match isn't clear, and write a one-line overview of each Space.</li>
   </ul>
-  <p><b>How to use it:</b> it mostly just works — when you save a session, Retrace writes the summary and name automatically, and auto-organize is a button in the Spaces view. The <b>first</b> time, your browser may need to do a <b>one-time download</b> of the AI model in the background; after that it runs offline.</p>
-  <p><b>This runs entirely on your device</b> — nothing about your tabs is ever sent anywhere. It needs a reasonably capable desktop (enough disk and memory/GPU for the model). If your device doesn't support it, Retrace quietly falls back to clear <b>domain-based summaries</b> instead — everything else still works. On-device AI is a free bonus, never something you pay for.</p>
+  <p><b>How to use it:</b> it mostly just works — when you save a session, Retrace writes the summary and name automatically, and <b>Ask AI</b> in <b>Spaces › Sort unfiled sessions</b> proposes Spaces. The <b>first</b> time, your browser may need to do a <b>one-time download</b> of the AI model in the background; after that it runs offline.</p>
+  <p><b>This runs entirely on your device</b> — nothing about your tabs is ever sent anywhere. It needs a reasonably capable desktop (enough disk and memory/GPU for the model). If your device doesn't support it, everything still works from your tabs' titles and addresses. On-device AI is a free bonus, never something you pay for.</p>
 
   <h2>Using Retrace Pro (paid)</h2>
   <p><b>Retrace Pro</b> is the one optional paid unlock — a <a href="pricing.html">one-time $10</a>, available in the <b>Microsoft Edge</b> version of Retrace. One license key turns on the whole bundle: backup &amp; restore (with encryption and a connected-file option), keyboard shortcuts and a command palette, auto-archive, and templates.</p>
@@ -112,7 +116,8 @@
   <ul>
     <li><b>My license key hasn't arrived.</b> Keys are issued by hand, so allow a few hours and check your spam/junk. After 2 business days with nothing, email <a href="mailto:support@retrace-addon.store">support@retrace-addon.store</a>.</li>
     <li><b>My key won't activate.</b> Paste the whole key, including the <code>RTRC-</code> prefix, into <b>Settings › Backup &amp; restore › Unlock</b>. Still stuck? Email us your <b>Paddle order number</b> (never your key) and we'll help you sort it out.</li>
-    <li><b>The AI isn't writing summaries.</b> Your device may not support on-device AI, or the model is still downloading. Retrace falls back to domain summaries meanwhile — that's expected, not a fault.</li>
+    <li><b>The AI isn't writing summaries.</b> Your device may not support on-device AI, or the model is still downloading. Meanwhile Retrace summarizes from your tabs' titles — that's expected, not a fault.</li>
+    <li><b>A session keeps getting suggested for the wrong Space.</b> Press ✕ next to the suggestion — it won't be suggested there again. A Space's rules always win, so check them in the Space's palette panel.</li>
     <li><b>A reopened session didn't restore what was on a page.</b> A session is a <b>record of the tabs you saved</b>, not a snapshot of unsaved in-page content — browsers can't capture that.</li>
   </ul>
 

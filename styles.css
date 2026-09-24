@@ -109,7 +109,7 @@ section .sub{text-align:center;color:var(--on-surface-variant);max-width:620px;m
 .steps li{counter-increment:s;list-style:none;display:flex;gap:16px;align-items:flex-start;background:var(--sc-low);border:1px solid var(--outline-variant);border-radius:16px;padding:18px 20px}
 .steps li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;font-weight:700;font-size:15px}
 .steps b{font-weight:600}
-.steps code{font-family:var(--mono);background:var(--sc-high);padding:2px 6px;border-radius:5px;font-size:13px}
+.steps code,.card code,.article code{font-family:var(--mono);background:var(--sc-high);padding:2px 6px;border-radius:5px;font-size:13px}
 
 /* Placeholder marker for unfilled links */
 .todo{outline:2px dashed var(--outline);outline-offset:3px}
