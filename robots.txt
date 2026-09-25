@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://retrace-addon.store/sitemap.xml

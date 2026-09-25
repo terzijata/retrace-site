@@ -134,7 +134,9 @@ footer.site a:hover{color:var(--on-surface)}
 .article .updated{color:var(--on-surface-variant);font-size:14px;margin-bottom:32px}
 .article h2{font-size:22px;margin:34px 0 10px;font-weight:600}
 .article p,.article li{color:var(--on-surface);font-size:15.5px}
-.article ul{padding-left:22px;display:grid;gap:8px}
+.article ul,.article ol{padding-left:22px;display:grid;gap:8px}
+.article .guide-cta{justify-content:flex-start;margin:36px 0 8px}
+.article .guide-list{list-style:none;padding-left:0;gap:14px}
 .article a{word-break:break-word}
 .article .back{display:inline-block;margin-bottom:24px;font-size:14px;font-weight:500;text-decoration:none}
 
