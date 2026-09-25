@@ -1,5 +1,7 @@
 /* Retrace site — Material 3 tokens lifted from the extension's sidepanel.css so the
-   page matches the product. No web fonts / no CDN, keeping the "no network" ethos. */
+   page matches the product. No web fonts / no CDN, keeping the "no network" ethos.
+   Browsers cache this file and icon.png: after changing either, bump the ?v= on their links in
+   every page, or returning visitors get the old file. */
 :root{
   --primary:#0B57D0; --on-primary:#fff; --primary-container:#D3E3FD; --on-primary-container:#041E49;
   --secondary-container:#C2E7FF; --on-secondary-container:#001D35;
@@ -31,7 +33,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--on-surface);font-family:var(--font);line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:var(--primary)}
-img{max-width:100%}
+img{max-width:100%;height:auto}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 :focus-visible{outline:2px solid var(--primary);outline-offset:2px;border-radius:4px}
 
