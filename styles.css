@@ -53,12 +53,18 @@ header.site{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--
 .btn.lg{height:52px;padding:0 28px;font-size:16px}
 
 /* Hero */
-.hero{padding:76px 0 56px;text-align:center}
+.hero{padding:76px 20px 56px;text-align:center}
 .hero .badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--on-active-c);background:var(--active-c);padding:6px 14px;border-radius:20px;margin-bottom:22px}
 .hero h1{font-size:clamp(34px,6vw,56px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px;font-weight:700}
 .hero p.lede{font-size:clamp(17px,2.4vw,21px);color:var(--on-surface-variant);max-width:640px;margin:0 auto 34px}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .hero .fineprint{margin-top:16px;font-size:13px;color:var(--on-surface-variant)}
+.hero-shot{display:block;width:100%;height:auto;margin:48px auto 0;border-radius:20px;box-shadow:var(--elev2)}
+
+/* Screenshot tour */
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.shots img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:var(--elev1)}
+@media (max-width:720px){.shots{grid-template-columns:1fr}}
 
 /* Section shell */
 section{padding:60px 0}
@@ -132,7 +138,7 @@ footer.site a:hover{color:var(--on-surface)}
 
 @media (max-width:560px){
   .nav .links a:not(.btn){display:none}
-  .hero{padding:52px 0 40px}
+  .hero{padding:52px 20px 40px}
   section{padding:46px 0}
 }
 
