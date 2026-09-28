@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Retrace — your browser history, made useful</title>
-<meta name="description" content="Retrace turns your tabs into sessions you can search, sort and reopen — like a better, built-in browser history. Everything stays on your device. No account, no network calls.">
+<meta name="description" content="Retrace shows every open window at a glance, keeps your tabs as sessions you can search and reopen, and files them into Spaces by itself — like a better, built-in browser history. Everything stays on your device.">
 <link rel="icon" href="icon.png?v=2">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 <meta property="og:title" content="Retrace — your browser history, made useful">
-<meta property="og:description" content="Sessions you can search, sort and reopen — like a better, built-in browser history. Everything stays on your device.">
+<meta property="og:description" content="Every window at a glance, sessions you can search and reopen, Spaces that fill themselves — like a better, built-in browser history. Everything stays on your device.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://retrace-addon.store/">
 <meta property="og:image" content="https://retrace-addon.store/img/og.png">
@@ -43,6 +43,8 @@
 <symbol id="i-open" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H600v-80h160v-480H200v480h160v80H200Zm240 0v-246l-64 64-56-58 160-160 160 160-56 58-64-64v246h-80Z"/></symbol>
 <symbol id="i-check" viewBox="0 -960 960 960"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></symbol>
 <symbol id="i-close" viewBox="0 -960 960 960"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></symbol>
+<symbol id="i-keyboard" viewBox="0 -960 960 960"><path d="M160-200q-33 0-56.5-23.5T80-280v-400q0-33 23.5-56.5T160-760h640q33 0 56.5 23.5T880-680v400q0 33-23.5 56.5T800-200H160Zm0-80h640v-400H160v400Zm160-40h320v-80H320v80ZM200-440h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80ZM200-560h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80ZM160-280v-400 400Z"/></symbol>
+<symbol id="i-folder" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></symbol>
 <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M6.5 19a4.5 4.5 0 0 1-.6-8.96A6.5 6.5 0 0 1 18.2 8.6 5.25 5.25 0 0 1 17.75 19H6.5Zm0-2h11.25a3.25 3.25 0 0 0 .15-6.5l-1.3-.06-.5-1.2A4.5 4.5 0 0 0 7.8 10.2l-.2 1.62-1.6.2A2.5 2.5 0 0 0 6.5 17Z"/></symbol>
 </svg>
 
@@ -64,26 +66,29 @@
   <section class="hero wrap" id="get">
     <span class="badge">● Works like a built-in browser feature · nothing leaves your device</span>
     <h1>Your browser history,<br>made useful.</h1>
-    <p class="lede">Retrace keeps your windows as <b>sessions</b> — named, searchable and one click from reopening. Like your history, it lives in your browser and nowhere else.</p>
+    <p class="lede">Retrace shows <b>every window</b> you have open, keeps them as <b>sessions</b> — named, searchable and one click from reopening — and files them into <b>Spaces</b> by itself. Like your history, it lives in your browser and nowhere else.</p>
     <div class="cta-row">
       <a class="btn primary lg" href="https://chromewebstore.google.com/detail/retrace-%E2%80%94-sessions-tabs/emckamdcooknppmfmblgelmajikidagb">Add to Chrome — free</a>
       <a class="btn primary lg" href="https://microsoftedge.microsoft.com/addons/detail/retrace-—-sessions-tabs/ofpbiapmnoipcmidljhfjldndoakdael">Add to Edge — free</a>
     </div>
     <p class="fineprint">Free · no account · optional <a href="#backup">Retrace Pro</a>, $10 once</p>
+    <p class="keyline">Then press <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>R</kbd> on any tab.</p>
 
     <!-- Three real screens, cross-faded in CSS (no script). Reduced motion shows the first. -->
     <div class="browser">
       <div class="browser-bar"><span></span><span></span><span></span></div>
       <div class="frames">
-        <picture class="frame f1"><source srcset="img/ui/hero-sessions-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/hero-sessions.webp" width="1440" height="900" alt="Retrace's full page: saved sessions on the left, and one session — “Where to stay in Lisbon” — open with its summary, note and tags."></picture>
-        <picture class="frame f2"><source srcset="img/ui/hero-spaces-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/hero-spaces.webp" width="1440" height="900" alt="A “Lisbon trip” Space holding the sessions saved for the trip." loading="lazy"></picture>
-        <picture class="frame f3"><source srcset="img/ui/hero-search-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/hero-search.webp" width="1440" height="900" alt="Searching “where did I see that hotel in alfama?” finds the Lisbon hotel session." loading="lazy"></picture>
+        <picture class="frame f1"><source srcset="img/ui/hero-windows-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/hero-windows.webp?v=5" width="1440" height="900" alt="Retrace's Windows view: every open window numbered and named — “Sourdough baking”, “Launch week” — with a one-line summary, its tab groups and its tabs."></picture>
+        <picture class="frame f2"><source srcset="img/ui/hero-sessions-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/hero-sessions.webp?v=5" width="1440" height="900" alt="Retrace's full page: saved sessions, and one session — “Where to stay in Lisbon” — open with its summary, note and tags." loading="lazy"></picture>
+        <picture class="frame f3"><source srcset="img/ui/hero-spaces-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/hero-spaces.webp?v=5" width="1440" height="900" alt="A “Lisbon trip” Space holding the sessions saved for the trip." loading="lazy"></picture>
+        <picture class="frame f4"><source srcset="img/ui/hero-search-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/hero-search.webp?v=5" width="1440" height="900" alt="Searching “where did I see that hotel in alfama?” finds the Lisbon hotel session." loading="lazy"></picture>
       </div>
     </div>
     <ol class="frame-labels" aria-hidden="true">
-      <li class="l1">Sessions, not a wall of tabs</li>
-      <li class="l2">Spaces that gather them</li>
-      <li class="l3">Ask in plain words</li>
+      <li class="l1">Every window at a glance</li>
+      <li class="l2">Sessions, not a wall of tabs</li>
+      <li class="l3">Spaces that fill themselves</li>
+      <li class="l4">Ask in plain words</li>
     </ol>
   </section>
 
@@ -113,7 +118,7 @@
         </figure>
         <div class="vs-arrow" aria-hidden="true">→</div>
         <figure class="vs-side">
-          <picture class="phone"><source srcset="img/ui/sessions-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/sessions.webp" width="800" height="1280" loading="lazy" alt="Retrace's side panel: saved sessions named “Sunset spots”, “Where to stay in Lisbon” and “Apartment shortlist”, each with a one-line summary."></picture>
+          <picture class="phone"><source srcset="img/ui/sessions-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/sessions.webp?v=5" width="800" height="1280" loading="lazy" alt="Retrace's side panel: saved sessions named “Sunset spots”, “Where to stay in Lisbon” and “Apartment shortlist”, each with a one-line summary."></picture>
           <figcaption><b>Retrace</b> — grouped by what you were doing, named, and one click to reopen.</figcaption>
         </figure>
       </div>
@@ -133,17 +138,17 @@
       <p class="sub">Three steps. No account, nothing to set up.</p>
       <ol class="how">
         <li>
-          <picture class="phone"><source srcset="img/ui/save-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/save.webp" width="800" height="1280" loading="lazy" alt="Retrace's side panel with the current window described and a Save button."></picture>
-          <h3><span class="num">1</span>Save</h3>
-          <p>One click — or Ctrl+Shift+S — keeps the window you're in.</p>
+          <picture class="phone"><source srcset="img/ui/save-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/save.webp?v=5" width="800" height="1280" loading="lazy" alt="Retrace's side panel on the Windows tab: this window, named “Sourdough baking”, with its summary and a Save button."></picture>
+          <h3><span class="num">1</span>Open it anywhere</h3>
+          <p><kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>R</kbd> shows every window, named and summed up. Save one in a click — or let Retrace keep it.</p>
         </li>
         <li>
-          <picture class="phone"><source srcset="img/ui/suggest-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/suggest.webp" width="800" height="1280" loading="lazy" alt="A session with “Suggested: Lisbon trip” and an Add button."></picture>
+          <picture class="phone"><source srcset="img/ui/suggest-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/suggest.webp?v=5" width="800" height="1280" loading="lazy" alt="A session with “Suggested: Lisbon trip” and an Add button."></picture>
           <h3><span class="num">2</span>Organize</h3>
-          <p>Retrace suggests the Space it belongs in.</p>
+          <p>Retrace files it into a Space — Work, Travel, Learning — or suggests one.</p>
         </li>
         <li>
-          <picture class="phone"><source srcset="img/ui/search-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/search.webp" width="800" height="1280" loading="lazy" alt="Searching “where did I see that hotel in alfama?” and the matching sessions."></picture>
+          <picture class="phone"><source srcset="img/ui/search-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/search.webp?v=5" width="800" height="1280" loading="lazy" alt="Searching “where did I see that hotel in alfama?” and the matching sessions."></picture>
           <h3><span class="num">3</span>Find it again</h3>
           <p>Ask in plain words. Reopen it all in one click.</p>
         </li>
@@ -157,44 +162,53 @@
       <h2>Everything you need to retrace your steps</h2>
       <div class="rows">
         <div class="row">
-          <picture class="phone"><source srcset="img/ui/detail-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/detail.webp" width="800" height="1280" loading="lazy" alt="A session's details: a one-line overview, topic chips, a note and its pages."></picture>
+          <picture class="phone"><source srcset="img/ui/windows-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/windows.webp?v=5" width="800" height="1280" loading="lazy" alt="Window 2, “Launch week”: an AI summary, its “Launch” tab group, and tools to group, close duplicates, sleep or select tabs."></picture>
+          <div class="row-text">
+            <h3>Every open window at a glance</h3>
+            <p>Each window gets a name and a one-line summary, with its tab groups and what's playing. Press <kbd>1</kbd>–<kbd>9</kbd> to jump there, <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>W</kbd> for the next one. Group, tidy or sleep tabs in a click.</p>
+          </div>
+        </div>
+        <div class="row">
+          <picture class="phone"><source srcset="img/ui/kept-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/kept.webp?v=5" width="800" height="1280" loading="lazy" alt="Sessions › Kept: “Apartment hunt”, open now, and “Running shoes”, closed yesterday, each with Keep for good and Forget."></picture>
+          <div class="row-text">
+            <h3>Close a window, lose nothing</h3>
+            <p>Busy windows are kept by themselves and follow along as you work. Close one by accident? It's still there for two weeks — keep it for good in one click.</p>
+          </div>
+        </div>
+        <div class="row">
+          <picture class="phone"><source srcset="img/ui/detail-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/detail.webp?v=5" width="800" height="1280" loading="lazy" alt="A session's details: a one-line overview, topic chips, a note and its pages."></picture>
           <div class="row-text">
             <h3>Sessions that describe themselves</h3>
             <p>A search shows as what you searched for, a video by its title, a repo by its name — never just “google.com”.</p>
           </div>
         </div>
         <div class="row">
-          <picture class="phone"><source srcset="img/ui/space-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/space.webp" width="800" height="1280" loading="lazy" alt="The Lisbon trip Space: an overview line, a note, and its sessions."></picture>
+          <picture class="phone"><source srcset="img/ui/space-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/space.webp?v=5" width="800" height="1280" loading="lazy" alt="The Lisbon trip Space: an overview line, a note, and its sessions."></picture>
           <div class="row-text">
-            <h3>Spaces for trips, projects and courses</h3>
-            <p>Related sessions gather in one place. Retrace learns what each Space is about and files new sessions for you.</p>
+            <h3>Spaces that fill themselves</h3>
+            <p>Start with Work, Personal, Learning, Shopping and Travel — or make your own, with sub-spaces inside. Retrace learns what each is about and files new sessions for you.</p>
           </div>
         </div>
         <div class="row">
-          <picture class="phone"><source srcset="img/ui/timeline-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/timeline.webp" width="800" height="1280" loading="lazy" alt="The recovery timeline: a slider over today and the windows and tabs that were open at that moment."></picture>
+          <picture class="phone"><source srcset="img/ui/timeline-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/timeline.webp?v=5" width="800" height="1280" loading="lazy" alt="The recovery timeline: a slider over today and the windows and tabs that were open at that moment."></picture>
           <div class="row-text">
             <h3>Go back to any moment</h3>
             <p>Every few minutes Retrace notes what's open. After a crash — or for that tab you closed an hour ago — slide back through the day.</p>
           </div>
         </div>
         <div class="row">
-          <picture class="phone"><source srcset="img/ui/music-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/music.webp" width="800" height="1280" loading="lazy" alt="The Music library: songs by artist, play counts, favourites and the sites each is on."></picture>
+          <picture class="phone"><source srcset="img/ui/music-dark.webp?v=5" media="(prefers-color-scheme: dark)"><img src="img/ui/music.webp?v=5" width="800" height="1280" loading="lazy" alt="The Music library: songs by artist, play counts, favourites and the sites each is on."></picture>
           <div class="row-text">
             <h3>All your music in one list</h3>
-            <p>One entry per song, whether you heard it on YouTube, Spotify or SoundCloud. <span class="pro-tag">Pro</span> adds the songs you play by themselves.</p>
-          </div>
-        </div>
-        <div class="row">
-          <picture class="phone"><source srcset="img/ui/windows-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/ui/windows.webp" width="800" height="1280" loading="lazy" alt="The Windows view: every open window and tab, with close-duplicates and sleep buttons."></picture>
-          <div class="row-text">
-            <h3>Every open window at a glance</h3>
-            <p>Search your open tabs, close duplicates, move tabs between windows and put background tabs to sleep.</p>
+            <p>One entry per song, whether you heard it on YouTube, Spotify or SoundCloud — playlists, and your history brought in from Spotify or YouTube. <span class="pro-tag">Pro</span> adds the songs you play by themselves, and a monthly recap.</p>
           </div>
         </div>
       </div>
 
       <h3 class="more-h">And the small things that add up</h3>
       <ul class="icons">
+        <li><svg class="ic"><use href="#i-keyboard"/></svg>One key opens it anywhere</li>
+        <li><svg class="ic"><use href="#i-folder"/></svg>Spaces inside Spaces</li>
         <li><svg class="ic"><use href="#i-tabgroup"/></svg>Tab groups kept</li>
         <li><svg class="ic"><use href="#i-sync"/></svg>Sessions that stay in sync</li>
         <li><svg class="ic"><use href="#i-note"/></svg>Notes on any page</li>
@@ -217,7 +231,7 @@
       <p class="sub">Retrace keeps everything in your browser's own storage — like your history and bookmarks. It has no servers to send anything to.</p>
       <div class="diagram" role="img" aria-label="Your browser, with Retrace inside it, and a crossed-out link to the internet.">
         <div class="d-box">
-          <img src="icon.png?v=2" alt="" width="44" height="44"><b>Your browser</b><span>sessions · spaces · music · timeline</span>
+          <img src="icon.png?v=2" alt="" width="44" height="44"><b>Your browser</b><span>windows · sessions · spaces · music · timeline</span>
         </div>
         <div class="d-link"><span class="d-x"><svg class="ic"><use href="#i-close"/></svg></span></div>
         <div class="d-box d-cloud"><svg class="ic big"><use href="#i-cloud"/></svg><b>Anyone's servers</b><span>never contacted</span></div>
@@ -240,10 +254,11 @@
           <div class="tag">Free</div>
           <div class="amt">$0</div>
           <ul>
-            <li>Sessions, Spaces, search &amp; history</li>
+            <li>Every window at a glance, kept automatically</li>
+            <li>Sessions, Spaces that fill themselves, search &amp; history</li>
             <li>Recovery timeline (a day)</li>
-            <li>Music library, notes, tags &amp; reminders</li>
-            <li>Windows view, tab groups, sharing &amp; import</li>
+            <li>Music: library, playlists, Spotify &amp; YouTube import</li>
+            <li>Notes, tags, reminders, sharing &amp; import</li>
             <li>On-device AI, when your device supports it</li>
           </ul>
           <a class="btn outline lg" href="#get">Add to your browser</a>
@@ -252,7 +267,8 @@
           <div class="tag">Retrace Pro · Chrome &amp; Edge</div>
           <div class="amt">$10<small> once</small></div>
           <ul>
-            <li><b>Listening</b> — songs you play go into Music by themselves</li>
+            <li><b>Listening</b> — songs you play go into Music by themselves, with a monthly <b>recap</b></li>
+            <li>Closed windows kept <b>90 days</b>; new tabs join their group</li>
             <li><b>Backup &amp; restore</b>, encrypted if you like</li>
             <li>A <b>connected backup file</b> for your other devices</li>
             <li><b>Keyboard shortcuts</b> + Ctrl-K palette</li>

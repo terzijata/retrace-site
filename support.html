@@ -9,7 +9,7 @@
 <meta name="description" content="How to get help with Retrace and how to use it — the free features, the on-device AI, and the paid Backup & restore. Support by email at support@retrace-addon.store.">
 <link rel="icon" href="icon.png?v=2">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -40,7 +40,7 @@
   <p>Not sure which to use? Just email <a href="mailto:support@retrace-addon.store">support@retrace-addon.store</a>. We're a solo team and reply as soon as we can — <b>usually within 1–2 business days</b>, and every message is answered by a person. <b>If you hit a problem, please email us before requesting a refund</b> — we can usually fix it quickly.</p>
 
   <h2>The basics: sessions &amp; Spaces</h2>
-  <p>A <b>session</b> is a saved snapshot of a window's tabs that you can search and reopen later. A <b>Space</b> is a folder that gathers related sessions over time. Retrace has three surfaces that share one design — a compact <b>popup</b>, a <b>side panel</b>, and a <b>full page</b> — and you can work from any of them.</p>
+  <p>A <b>session</b> is a saved snapshot of a window's tabs that you can search and reopen later. A <b>Space</b> is a folder that gathers related sessions over time. Retrace opens on <b>Windows</b> — everything open right now — and has three surfaces that share one design — a compact <b>popup</b>, a <b>side panel</b>, and a <b>full page</b> — so you can work from any of them. Press <b>Alt+Shift+R</b> on any tab to open it (change the key at <code>chrome://extensions/shortcuts</code>).</p>
 
   <h2>Using the free features</h2>
   <ul>
@@ -53,14 +53,16 @@
     <li><b>Rename &amp; delete</b> — rename any session, or delete it; destructive actions show an <b>Undo</b>. Deleted sessions also go to a <b>30-day trash</b> in Settings, so you can restore them later.</li>
     <li><b>Sort &amp; multi-select</b> — sort your list by recent, name, or number of tabs, and use <b>Select</b> to archive, delete, or move several sessions to a Space at once.</li>
     <li><b>Grow a session</b> — use <b>Add this window</b> to fold the current tabs into an existing session, or remove a single tab from it.</li>
+    <li><b>Default spaces &amp; sub-spaces</b> — the Spaces tab offers Work, Personal, Learning, Shopping and Travel once; add them and Retrace files matching sessions into them, now and as you save. Put a space inside another from its palette button (<b>Inside</b>), or use <b>Sub-spaces › New</b> in a space. <code>in:Work</code> searches Work and its sub-spaces.</li>
     <li><b>Spaces</b> — create folders and move sessions into them to keep related work together. Retrace learns what each Space is about: when you save a window it suggests the right Space (tap <b>Add</b>), and <b>Spaces › Sort unfiled sessions</b> files the rest in a tap and proposes new Spaces. To have clear matches filed for you, choose <b>Settings › Saving › Spaces for new sessions › File automatically when sure</b> (there's always an Undo).</li>
     <li><b>Space rules, look &amp; notes</b> — open a Space and press the palette button to give it an emoji, a colour and <b>auto-file rules</b> (sites like <code>jira.acme.com</code> or <code>github.com/acme</code>, and words). Saves that match go straight in. A Space also has a note, and can open all its sessions at once — each in its own window, or all in one window with a tab group per session.</li>
     <li><b>Notes</b> — in a session's details, write a note on the session, or press the note icon on any page to note that page. Notes are searchable.</li>
-    <li><b>Group tabs</b> — press <b>Group tabs</b> next to “Active now” to sort the current window's loose tabs into browser tab groups by topic. Your pinned tabs and existing groups are left alone, and <b>Undo</b> removes the new groups.</li>
+    <li><b>Group tabs</b> — press <b>Group tabs</b> on a window in the Windows tab to sort its loose tabs into browser tab groups by topic. Your pinned tabs and existing groups are left alone, and <b>Undo</b> removes the new groups.</li>
     <li><b>Search &amp; history</b> — search every session by title, summary, note, page title or web address (including the words of a search you made). Narrow it with <code>site:github.com</code>, <code>in:Work</code>, <code>is:pinned</code>, or dates like “last week” and “yesterday” — or type a sentence. Restore recently closed windows, and browse a searchable log of what you did (you can clear it in Settings).</li>
     <li><b>Save &amp; close</b> — in <b>Settings › After saving a window</b>, choose <b>Close saved tabs</b> and every save also closes those tabs to free up memory (browser-pinned tabs are left alone).</li>
     <li><b>Keep a session in sync</b> — in a session's details, turn on <b>Keep in sync with its window</b>. While its window is open, the session follows it: tabs you open, close or move are saved automatically. Reopening the session picks the link up again, even after a browser restart.</li>
-    <li><b>Windows</b> — the <b>Windows</b> tab shows every open window. Search all open tabs, jump to one, drag a tab onto another window to move it, <b>Save all</b>, <b>Close duplicates</b> (with Undo), or press the moon icon to put background tabs to sleep and free memory. Duplicates and sleep are also next to <b>Active now</b>.</li>
+    <li><b>Windows</b> — the first tab shows every open window, numbered in the order you opened them, each with a name, a one-line summary, its tab groups and what's playing. Press <b>1–9</b> there to jump to a window, or <b>Alt+Shift+W</b> anywhere for the next one (give <i>Go to window 1/2/3</i> keys at <code>chrome://extensions/shortcuts</code>). On each window: <b>Group tabs</b>, <b>Close duplicates</b> (with Undo), <b>Sleep</b> (frees memory), <b>Select</b> to save just some tabs, and <b>Save</b>. If a window looks like a session you saved, <b>Keep in sync</b> links them. Drag a tab onto another window to move it. Prefer to start on Sessions? <b>Settings › Open Retrace on</b>.</li>
+    <li><b>Kept windows</b> — a window with 5 or more pages, open for 10 minutes, is kept by itself under <b>Sessions › Kept</b> and follows the window. Closed, it stays 14 days, then goes to the trash; <b>Keep for good</b> makes it a normal session, <b>Forget</b> removes it. Windows you've saved aren't kept twice. Turn it off in <b>Settings › Keep my windows automatically</b>.</li>
     <li><b>Share</b> — in a session's details (or a Space's header), press <b>Share</b> to copy the links (plain or Markdown) or save a <b>Retrace file</b> or a <b>web page</b> of links. Nothing is uploaded. Notes are left out unless you tick <b>Include my notes</b>. To open a Retrace file someone sent you: <b>Settings › Import from another tab manager</b>.</li>
     <li><b>Tags</b> — in a session's details, type a tag and press Enter (suggested topics appear underneath). Click a tag on any card, or search <code>#tag</code>, to see everything with it.</li>
     <li><b>Reminders</b> — press <b>Remind me</b> in a session's details and pick a time. When it's due, the session waits at the top of your list and the toolbar icon shows a number; opening it marks it done.</li>
@@ -84,8 +86,11 @@
   <p>Open <b>Spaces › Music</b>. It's a library of songs — one entry per song, whichever site you heard it on (YouTube, YouTube Music, Spotify, SoundCloud, Bandcamp).</p>
   <ul>
     <li><b>Add songs:</b> <b>Add songs from this window</b>, <b>Add a link</b> (paste the link and type “Artist – Title”), <b>Add to Music</b> in a saved session's Music section, or <b>Add this song to Music</b> in the popup's Save menu.</li>
-    <li><b>Browse:</b> <b>Recent</b> (by when you last played or added them) or <b>Songs</b> (favourites first, then by artist). The search box searches songs while Music is open. Tap ♥ to favourite; ✕ removes a song, with Undo.</li>
-    <li><b>Automatically (Retrace Pro):</b> turn on <b>Settings › Listening › Remember music I listen to</b>. A song counts once it has played for 20 seconds in a tab; the same song on another site adds a link to the same entry. Retrace reads only tab titles — it never listens to audio and nothing leaves your device. Songs in desktop apps or on other devices aren't seen.</li>
+    <li><b>Browse:</b> <b>Recent</b> (by when you last played or added them), <b>Songs</b> (favourites first, then by artist) or <b>Playlists</b>. The search box searches songs while Music is open. Tap ♥ to favourite; a song's ⋮ menu adds it to a playlist, edits its artist and title, or removes it (with Undo).</li>
+    <li><b>Play:</b> click a song to play it — Retrace plays on through that list in one tab, with <b>Next</b> and <b>Previous</b> in the player at the bottom. Play, pause and volume stay with your browser's own media button.</li>
+    <li><b>Bring your history:</b> <b>Import &amp; export</b> reads the files you download yourself — Spotify's data export (<code>StreamingHistory…json</code>) or Google Takeout's YouTube history (<code>watch-history.json</code>). You see what will come in first, and Undo takes it back. Export your songs as CSV, or share a playlist as links or a file.</li>
+    <li><b>Insights (Retrace Pro):</b> the <b>Insights</b> tab shows a month, a year or all time — plays, time listened, top artists and songs, your longest streak and when in the day you listen.</li>
+    <li><b>Automatically (Retrace Pro):</b> turn on <b>Settings › Listening › Remember music I listen to</b>. You can pause it, choose which sites count, and forget today's plays. A song counts once it has played for 20 seconds in a tab; the same song on another site adds a link to the same entry. Retrace reads only tab titles — it never listens to audio and nothing leaves your device. Songs in desktop apps or on other devices aren't seen.</li>
   </ul>
 
   <h2>Using Retrace Pro (paid)</h2>

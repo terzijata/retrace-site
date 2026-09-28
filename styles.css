@@ -163,16 +163,21 @@ footer.site a:hover{color:var(--on-surface)}
 .browser-bar{display:flex;gap:7px;padding:11px 14px;background:var(--sc-high)}
 .browser-bar span{width:11px;height:11px;border-radius:50%;background:var(--outline-variant)}
 .frames{position:relative;aspect-ratio:1440/900;background:var(--surface)}
-.frame{position:absolute;inset:0;opacity:0;animation:rt-fade 15s infinite}
+.frame{position:absolute;inset:0;opacity:0;animation:rt-fade 20s infinite}
 .frame img{display:block;width:100%;height:100%}
 .f2{animation-delay:5s}
 .f3{animation-delay:10s}
-@keyframes rt-fade{0%{opacity:0}4%{opacity:1}33%{opacity:1}37%{opacity:0}100%{opacity:0}}
+.f4{animation-delay:15s}
+@keyframes rt-fade{0%{opacity:0}3%{opacity:1}25%{opacity:1}28%{opacity:0}100%{opacity:0}}
 .frame-labels{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0}
-.frame-labels li{font-size:14px;font-weight:600;padding:6px 14px;border-radius:20px;color:var(--on-surface-variant);animation:rt-label 15s infinite}
+.frame-labels li{font-size:14px;font-weight:600;padding:6px 14px;border-radius:20px;color:var(--on-surface-variant);animation:rt-label 20s infinite}
 .frame-labels .l2{animation-delay:5s}
 .frame-labels .l3{animation-delay:10s}
-@keyframes rt-label{0%,37%,100%{background:transparent;color:var(--on-surface-variant)}4%,33%{background:var(--primary-container);color:var(--on-primary-container)}}
+.frame-labels .l4{animation-delay:15s}
+@keyframes rt-label{0%,28%,100%{background:transparent;color:var(--on-surface-variant)}3%,25%{background:var(--primary-container);color:var(--on-primary-container)}}
+/* Keycaps, for the one shortcut worth learning */
+kbd{display:inline-block;font:600 .85em/1 ui-monospace,Consolas,monospace;padding:.28em .5em;border-radius:6px;background:var(--sc-high);color:var(--on-surface);border:1px solid var(--outline-variant);border-bottom-width:2px;vertical-align:.08em}
+.keyline{margin:14px 0 0;font-size:15px;color:var(--on-surface-variant)}
 @media (prefers-reduced-motion:reduce){
   .frame,.frame-labels li{animation:none}
   .f1{opacity:1}
